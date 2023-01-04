@@ -1,3 +1,5 @@
 # Sorting-Algorithms
-Repo for a simple library for sorting collection of objects based on specified types.
-my basic alogorithim. 
+Repo for a simple alogrithm for sorting out an inventory system:
+
+Program itself:
+
