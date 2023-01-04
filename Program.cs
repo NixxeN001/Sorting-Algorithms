@@ -15,6 +15,7 @@ testClasses.Add(new TestClass("Spear", 45, 20, 3.5f));
 Console.WriteLine("Unsorted List");
 string filepath = "JSON_Test.json";
 
+//sorting secion of the code 
 testClasses.Sort();
 var namecol = new TestClass[testClasses.Count];
 testClasses.CopyTo(namecol, 0);
@@ -35,16 +36,13 @@ var finalcol = new TestClass[testClasses.Count];
 testClasses.CopyTo(finalcol, 0);
 finalcol = finalcol.Concat(damcol).ToArray();
 
-//JSON serialize
+
+//JSON serialize to the bin file
 string JsonSerial = JsonSerializer.Serialize(finalcol);
 //Console.WriteLine(Jsonstring);
 
 Console.WriteLine(JsonSerial);
 File.WriteAllText(filepath, JsonSerial);
-
-
-
-
 /*
 Console.WriteLine("\n");
 testClasses.Sort(new PriceComaperer());
