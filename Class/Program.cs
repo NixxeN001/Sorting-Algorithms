@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Sorting_AlgorithmsNew;
+using Sorting_AlgorithmsNew.Class;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;

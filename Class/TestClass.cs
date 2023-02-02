@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sorting_AlgorithmsNew
+namespace Sorting_AlgorithmsNew.Class
 {
     internal class TestClass : IComparable<TestClass>
     {
@@ -64,7 +64,7 @@ namespace Sorting_AlgorithmsNew
             else return -1;
         }
     }
-    class RangeComparer: IComparer<TestClass>
+    class RangeComparer : IComparer<TestClass>
     {
         public int Compare(TestClass? x, TestClass? y)
         {
