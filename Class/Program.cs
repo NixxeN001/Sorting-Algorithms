@@ -4,19 +4,35 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 //Console.WriteLine("Hello, World!");
-List<TestClass> testClasses = new List<TestClass>();
+var Invetory = new List<Item>()
+{
+    new Item{price=4,damage = 10f, name = "A"},
+    new Item{price=2,damage = 12f, name = "Q"},
+    new Item{price=5,damage = 1.2f, name = "D"},
+    new Item{price=1,damage = 1.3f, name = "S"},
+    new Item{price=17,damage = 0.4f, name = "R"},
+};
 
-testClasses.Add(new TestClass());
-testClasses.Add(new TestClass("Sword", 5, 2, 0.4f));
-testClasses.Add(new TestClass("Axe", 100, 3, 4f));
-testClasses.Add(new TestClass("Spear", 45, 20, 3.5f));
+Console.WriteLine("unsorted");
+for (int i = 0; i < Invetory.Count; i++)
+{
+    Console.WriteLine(Invetory[i].price + ":" + Invetory[i].damage + ":" + Invetory[i].name);
+}
 
+Sorter.SortbyFloat(ref Invetory, "price");
+
+Console.WriteLine("Sorted");
+for (int i = 0; i < Invetory.Count; i++)
+{
+    Console.WriteLine(Invetory[i].price + ":" + Invetory[i].damage + ":" + Invetory[i].name);
+}
 //testClasses.ForEach(testClass => Console.WriteLine(testClass.Name));
-Console.WriteLine("Unsorted List");
-string filepath = "JSON_Test.json";
+//Console.WriteLine("Unsorted List");
+//string filepath = "JSON_Test.json";
 
+#region old code
 //sorting secion of the code 
-testClasses.Sort();
+/*testClasses.Sort();
 var namecol = new TestClass[testClasses.Count];
 testClasses.CopyTo(namecol, 0);
 
@@ -43,7 +59,7 @@ string JsonSerial = JsonSerializer.Serialize(finalcol);
 
 Console.WriteLine(JsonSerial);
 File.WriteAllText(filepath, JsonSerial);
-/*
+
 Console.WriteLine("\n");
 testClasses.Sort(new PriceComaperer());
 Console.WriteLine("Sorted by Price");
@@ -58,5 +74,5 @@ Console.WriteLine("\n");
 testClasses.Sort(new RangeComparer());
 Console.WriteLine("Sorted by Range");
 testClasses.ForEach(Console.WriteLine);*/
-
+#endregion
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sorting_AlgorithmsNew
 {
-    internal class TestClass : IComparable<TestClass>
+    public class TestClass : IComparable<TestClass>
     {
 
         private string name = "";
